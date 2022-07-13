@@ -1,18 +1,23 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * _strcmp -> for  comparing purposes 
- * @s1: param 1
- * @s2: param 2
- *
- * Return: integer
+ * _strcmp - compare
+ * @s1 : pointerto char params
+ * @s2 : pointer to char params
+ * Return: *dest
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int result;
+	int i;
+	int R;
 
-	result = _strcmp (s1, s2);
-	return (result);
+	i = 0;
+
+	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
+	{
+		i++;
+	}
+	R = s1[i] - s2[i];
+	return (R);
 }
